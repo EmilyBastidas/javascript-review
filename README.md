@@ -1,13 +1,13 @@
 # JavaScript Review
 
-Este repositorio contiene mis ejercicios, apuntes y prácticas de JavaScript mientras continúo fortaleciendo mis conocimientos como desarrolladora Full-Stack.
+Este repositorio contiene mis ejercicios, apuntes y prácticas de JavaScript mientras continúo fortaleciendo mis conocimientos como desarrolladora Full-Stack, espero que puedan ser de utilidad para otros desarrolladores que busquen aprender de JS.
 
 ## Objetivos
 
-- Reforzar los fundamentos de JavaScript.
-- Practicar lógica de programación.
-- Comprender mejor el funcionamiento del lenguaje.
-- Construir una base sólida para React y el desarrollo Full-Stack.
+- Reforzar los fundamentos de JavaScript
+- Practicar lógica de programación
+- Comprender mejor el funcionamiento del lenguaje
+- Construir una base sólida para React y el desarrollo Full-Stack
 - Documentar mi progreso y aprendizaje.
 
 ## Temas de estudio

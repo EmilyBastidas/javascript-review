@@ -278,3 +278,347 @@ nombre: "Emily"
 };
 
 const gatos = ["Luna", "Milo"];
+
+# Operadores
+
+Los operadores permiten realizar acciones sobre valores y variables
+
+## Operadores aritméticos
+
+Se utilizan para realizar operaciones matemáticas
+
+| Operador | Descripción    | Ejemplo  |
+| -------- | -------------- | -------- |
+| +        | Suma           | 5 + 3    |
+| -        | Resta          | 5 - 3    |
+| \*       | Multiplicación | 5 \* 3   |
+| /        | División       | 10 / 2   |
+| %        | Módulo (resto) | 10 % 3   |
+| \*\*     | Potencia       | 2 \*\* 3 |
+
+### Ejemplos
+
+```js
+console.log(5 + 3); // 8
+console.log(5 - 3); // 2
+console.log(5 * 3); // 15
+console.log(10 / 2); // 5
+console.log(10 % 3); // 1
+console.log(2 ** 3); // 8
+```
+
+---
+
+## Operadores de asignación
+
+Permiten asignar o actualizar valores en variables.
+
+| Operador | Ejemplo       |
+| -------- | ------------- |
+| =        | let edad = 25 |
+| +=       | puntos += 5   |
+| -=       | puntos -= 5   |
+| \*=      | puntos \*= 2  |
+| /=       | puntos /= 2   |
+
+### Ejemplo
+
+```js
+let puntos = 10;
+
+puntos += 5;
+puntos -= 2;
+puntos *= 2;
+puntos /= 2;
+```
+
+---
+
+## Operadores de comparación
+
+Comparan valores y devuelven `true` o `false`.
+
+| Operador | Descripción             |
+| -------- | ----------------------- |
+| ==       | Igual                   |
+| ===      | Estrictamente igual     |
+| !=       | Diferente               |
+| !==      | Estrictamente diferente |
+| >        | Mayor que               |
+| <        | Menor que               |
+| >=       | Mayor o igual           |
+| <=       | Menor o igual           |
+
+### Ejemplos
+
+```js
+console.log(5 > 3); // true
+console.log(5 < 3); // false
+console.log(10 === 10); // true
+```
+
+### Diferencia entre == y ===
+
+```js
+console.log(5 == "5"); // true
+console.log(5 === "5"); // false
+```
+
+Se recomienda utilizar `===` para evitar conversiones automáticas de tipo.
+
+---
+
+## Operadores lógicos
+
+Permiten combinar o invertir condiciones.
+
+### AND (&&)
+
+Devuelve `true` cuando todas las condiciones son verdaderas.
+
+```js
+const edad = 20;
+const tieneEntrada = true;
+
+console.log(edad >= 18 && tieneEntrada);
+```
+
+### OR (||)
+
+Devuelve `true` cuando al menos una condición es verdadera.
+
+```js
+console.log(true || false);
+```
+
+### NOT (!)
+
+Invierte el valor de una expresión.
+
+```js
+console.log(!true);
+```
+
+---
+
+## Nota importante
+
+En proyectos modernos de JavaScript y React es recomendable utilizar:
+
+```js
+===
+!==
+&&
+||
+!
+```
+
+porque ofrecen comparaciones más seguras y predecibles.
+
+## PDT: Cómo recordar AND y OR
+
+### AND (`&&`)
+
+Piensa:
+
+> "Necesito TODO"
+
+Todas las condiciones deben ser verdaderas.
+
+```js
+true && true;
+// true
+
+true && false;
+// false
+```
+
+---
+
+### OR (`||`)
+
+Piensa:
+
+> "Me sirve CUALQUIERA"
+
+Basta con que una condición sea verdadera.
+
+```js
+true || false;
+// true
+
+false || true;
+// true
+
+false || false;
+// false
+```
+
+---
+
+### Regla rápida
+
+```text
+&&  → Todas deben cumplirse
+||  → Al menos una debe cumplirse
+!   → Invierte el resultado
+```
+
+### Ejemplo práctico
+
+```js
+const esAdmin = false;
+const esModerador = true;
+
+console.log(esAdmin || esModerador);
+// true
+```
+
+Aunque no sea administrador, es moderador, por lo que la condición se cumple.
+
+# Condicionales
+
+Los condicionales permiten que un programa tome decisiones según si una condición es verdadera o falsa.
+
+---
+
+## if
+
+Ejecuta un bloque de código si la condición es verdadera.
+
+```js
+const temperatura = 30;
+
+if (temperatura > 25) {
+  console.log("Hace calor");
+}
+```
+
+Resultado:
+
+```text
+Hace calor
+```
+
+---
+
+## if / else
+
+Permite ejecutar una acción cuando la condición es verdadera y otra cuando es falsa.
+
+```js
+const edad = 15;
+
+if (edad >= 18) {
+  console.log("Puede entrar");
+} else {
+  console.log("No puede entrar");
+}
+```
+
+Resultado:
+
+```text
+No puede entrar
+```
+
+---
+
+## if / else if / else
+
+Permite evaluar varias condiciones.
+
+```js
+const nota = 85;
+
+if (nota >= 90) {
+  console.log("Excelente");
+} else if (nota >= 70) {
+  console.log("Aprobado");
+} else {
+  console.log("Reprobado");
+}
+```
+
+Resultado:
+
+```text
+Aprobado
+```
+
+---
+
+## Operador ternario
+
+Es una forma abreviada de escribir un `if/else`.
+
+```js
+const edad = 20;
+
+const mensaje = edad >= 18 ? "Mayor de edad" : "Menor de edad";
+
+console.log(mensaje);
+```
+
+Resultado:
+
+```text
+Mayor de edad
+```
+
+---
+
+## PDT: Cómo recordar los condicionales
+
+Piensa en los condicionales como preguntas:
+
+```text
+Si ocurre algo → haz esto.
+Si no ocurre → haz otra cosa.
+```
+
+Ejemplo:
+
+```js
+const tieneToken = true;
+
+if (tieneToken) {
+  console.log("Acceso permitido");
+} else {
+  console.log("Acceso denegado");
+}
+```
+
+Los condicionales son la base para controlar el flujo de una aplicación y tomar decisiones según el estado de los datos.
+
+## PDT: Cómo analizar un condicional
+
+Cuando vea un `if`, primero debo evaluar la condición.
+
+Ejemplo:
+
+```js
+const tareasPendientes = 0;
+
+if (tareasPendientes > 0) {
+  console.log("Tienes tareas pendientes");
+} else {
+  console.log("No tienes tareas pendientes");
+}
+```
+
+Paso a paso:
+
+```js
+0 > 0;
+```
+
+Resultado:
+
+```js
+false;
+```
+
+Como la condición es falsa, JavaScript ejecuta el bloque `else`.
+
+No memorizar el resultado. Analizar siempre la condición primero.
