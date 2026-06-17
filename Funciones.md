@@ -224,3 +224,156 @@ mensaje = "Hola Emily";
 ### Regla rápida
 
 Cuando una función tiene `return`, la variable guarda el resultado que devuelve la función, no el código de la función ni sus parámetros por separado.
+
+## PDT: Una función puede participar en expresiones
+
+El valor devuelto por una función puede utilizarse igual que cualquier otro dato.
+
+```js
+function sumar(a, b) {
+  return a + b;
+}
+
+const resultado = sumar(10, 5) + sumar(2, 3);
+```
+
+Paso a paso:
+
+```js
+sumar(10, 5); // 15
+sumar(2, 3); // 5
+```
+
+La expresión se convierte en:
+
+```js
+15 + 5;
+```
+
+Resultado:
+
+```js
+20;
+```
+
+Una función devuelve un valor que puede almacenarse, compararse o utilizarse en otras operaciones.
+
+# Arrow Functions
+
+Las Arrow Functions son una forma más corta y moderna de escribir funciones en JavaScript.
+
+---
+
+## Función tradicional
+
+```js
+function saludar(nombre) {
+  return "Hola " + nombre;
+}
+```
+
+---
+
+## Arrow Function
+
+```js
+const saludar = (nombre) => {
+  return "Hola " + nombre;
+};
+```
+
+---
+
+## Sin parámetros
+
+```js
+const saludar = () => {
+  return "Hola";
+};
+```
+
+---
+
+## Un parámetro
+
+```js
+const saludar = (nombre) => {
+  return "Hola " + nombre;
+};
+```
+
+---
+
+## Return implícito
+
+```js
+const sumar = (a, b) => a + b;
+```
+
+Es equivalente a:
+
+```js
+const sumar = (a, b) => {
+  return a + b;
+};
+```
+
+---
+
+## Ejemplo
+
+```js
+const multiplicar = (a, b) => a * b;
+
+console.log(multiplicar(2, 4));
+```
+
+Resultado:
+
+```text
+8
+```
+
+---
+
+## PDT
+
+Las siguientes funciones hacen exactamente lo mismo:
+
+```js
+function sumar(a, b) {
+  return a + b;
+}
+```
+
+```js
+const sumar = (a, b) => {
+  return a + b;
+};
+```
+
+```js
+const sumar = (a, b) => a + b;
+```
+
+La diferencia está en la sintaxis, no en el resultado.
+
+## PDT: Arrow Functions en React
+
+En React es muy común encontrar funciones declaradas así:
+
+```js
+const handleAddTask = () => {
+  console.log("Nueva tarea");
+};
+```
+
+o
+
+```js
+const handleDeleteTask = (id) => {
+  console.log(id);
+};
+```
+
+Por eso es importante sentirse cómodo leyendo y escribiendo Arrow Functions.
