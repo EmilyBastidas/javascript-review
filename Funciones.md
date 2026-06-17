@@ -192,3 +192,35 @@ parámetro2 = valor2;
 ```
 
 antes de ejecutar el código de la función.
+
+## PDT: ¿Qué guarda una variable cuando llamo una función?
+
+Ejemplo:
+
+```js
+function saludar(nombre) {
+  return "Hola " + nombre;
+}
+
+const mensaje = saludar("Emily");
+```
+
+Paso a paso:
+
+```js
+nombre = "Emily";
+```
+
+```js
+return "Hola Emily";
+```
+
+Entonces:
+
+```js
+mensaje = "Hola Emily";
+```
+
+### Regla rápida
+
+Cuando una función tiene `return`, la variable guarda el resultado que devuelve la función, no el código de la función ni sus parámetros por separado.
