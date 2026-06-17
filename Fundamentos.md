@@ -622,3 +622,175 @@ false;
 Como la condición es falsa, JavaScript ejecuta el bloque `else`.
 
 No memorizar el resultado. Analizar siempre la condición primero.
+
+# Bucles
+
+Los bucles permiten repetir un bloque de código varias veces sin necesidad de escribirlo repetidamente.
+
+---
+
+## FOR
+
+Se utiliza cuando sabemos cuántas veces queremos repetir una acción.
+
+```js
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+Resultado:
+
+```text
+0
+1
+2
+3
+4
+```
+
+### Estructura
+
+```js
+for (inicio; condición; incremento) {
+  // código
+}
+```
+
+### Componentes
+
+```js
+for (let i = 0; i < 5; i++)
+```
+
+- `let i = 0` → valor inicial
+- `i < 5` → condición
+- `i++` → incremento
+
+---
+
+## Recorrer un array
+
+```js
+const gatos = ["Luna", "Milo", "Nina"];
+
+for (let i = 0; i < gatos.length; i++) {
+  console.log(gatos[i]);
+}
+```
+
+Resultado:
+
+```text
+Luna
+Milo
+Nina
+```
+
+---
+
+## WHILE
+
+Se ejecuta mientras una condición sea verdadera.
+
+```js
+let contador = 0;
+
+while (contador < 5) {
+  console.log(contador);
+  contador++;
+}
+```
+
+Resultado:
+
+```text
+0
+1
+2
+3
+4
+```
+
+---
+
+## PDT
+
+Los arrays utilizan indexación basada en cero.
+
+```js
+const gatos = ["Luna", "Milo", "Nina"];
+
+console.log(gatos[0]);
+```
+
+Resultado:
+
+```text
+Luna
+```
+
+El primer elemento siempre se encuentra en la posición `0`.
+
+---
+
+## PDT
+
+No memorizar el resultado de un bucle.
+
+Analizar siempre:
+
+1. Valor inicial.
+2. Condición.
+3. Incremento.
+4. Momento en que la condición deja de cumplirse.
+
+```
+
+```
+
+## PDT: Cómo recordar `i++`
+
+```js
+i++;
+```
+
+Es equivalente a:
+
+```js
+i = i + 1;
+```
+
+Su función es aumentar el valor de la variable en 1.
+
+Ejemplo:
+
+```js
+let i = 0;
+
+i++; // 1
+i++; // 2
+i++; // 3
+```
+
+### Truco mental
+
+Leer:
+
+```js
+i++;
+```
+
+como:
+
+> "Avanza al siguiente número"
+
+en lugar de:
+
+> "Incrementa una variable"
+
+Esto ayuda a entender mejor los bucles `for`.
+
+```
+
+```
