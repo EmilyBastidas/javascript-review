@@ -377,3 +377,103 @@ const handleDeleteTask = (id) => {
 ```
 
 Por eso es importante sentirse cómodo leyendo y escribiendo Arrow Functions.
+
+# Scope
+
+# Scope (Alcance)
+
+El scope determina dónde puede ser utilizada una variable.
+
+---
+
+## Scope global
+
+Las variables declaradas fuera de funciones o bloques son globales.
+
+```js
+const nombre = "Emily";
+
+function saludar() {
+  console.log(nombre);
+}
+```
+
+La función puede acceder a `nombre` porque es una variable global.
+
+---
+
+## Scope local (de función)
+
+Las variables declaradas dentro de una función solo existen dentro de ella.
+
+```js
+function saludar() {
+  const mensaje = "Hola";
+  console.log(mensaje);
+}
+```
+
+Esto produce error:
+
+```js
+console.log(mensaje);
+```
+
+porque `mensaje` solo existe dentro de la función.
+
+---
+
+## Scope de bloque
+
+Las variables declaradas con `let` o `const` solo existen dentro del bloque donde fueron creadas.
+
+```js
+if (true) {
+  const edad = 25;
+}
+```
+
+Esto produce error:
+
+```js
+console.log(edad);
+```
+
+---
+
+## Diferencia entre var, let y const
+
+```js
+if (true) {
+  var a = 1;
+  let b = 2;
+  const c = 3;
+}
+
+console.log(a); // 1
+console.log(b); // Error
+console.log(c); // Error
+```
+
+### Resumen
+
+```text
+var   → Scope de función
+let   → Scope de bloque
+const → Scope de bloque
+```
+
+---
+
+## PDT
+
+Piensa en el scope como habitaciones.
+
+Las variables internas pueden acceder a variables externas.
+
+Las variables externas no pueden acceder a variables internas.
+
+```text
+Dentro → puede mirar hacia afuera
+Fuera  → no puede mirar hacia adentro
+```
