@@ -422,3 +422,85 @@ Devuelve únicamente el primero.
 `find()` deja de recorrer el array cuando encuentra la primera coincidencia.
 
 Por eso suele ser más eficiente que `filter()` cuando solo necesitas un elemento.
+
+# forEach()
+
+`forEach()` recorre un array y ejecuta una acción por cada elemento.
+
+---
+
+## Sintaxis
+
+```js
+array.forEach((elemento) => {
+  // acción
+});
+```
+
+---
+
+## Ejemplo
+
+```js
+const numeros = [1, 2, 3];
+
+numeros.forEach((numero) => {
+  console.log(numero);
+});
+```
+
+Resultado:
+
+```text
+1
+2
+3
+```
+
+---
+
+## Obtener el índice
+
+```js
+const gatos = ["Milo", "Luna", "Nina"];
+
+gatos.forEach((gato, indice) => {
+  console.log(indice, gato);
+});
+```
+
+Resultado:
+
+```text
+0 Milo
+1 Luna
+2 Nina
+```
+
+---
+
+## Diferencia con map()
+
+```js
+forEach();
+```
+
+Recorre elementos.
+
+```js
+map();
+```
+
+Recorre y devuelve un nuevo array.
+
+---
+
+## PDT
+
+`forEach()` siempre devuelve:
+
+```js
+undefined;
+```
+
+Por eso no se usa para transformar datos.
