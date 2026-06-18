@@ -477,3 +477,126 @@ Las variables externas no pueden acceder a variables internas.
 Dentro → puede mirar hacia afuera
 Fuera  → no puede mirar hacia adentro
 ```
+
+# Parámetros y Retorno
+
+## Parámetros
+
+Los parámetros son las variables que recibe una función.
+
+```js
+function saludar(nombre) {
+  console.log("Hola " + nombre);
+}
+```
+
+En este ejemplo:
+
+```js
+nombre;
+```
+
+es un parámetro.
+
+---
+
+## Argumentos
+
+Los argumentos son los valores enviados a la función.
+
+```js
+saludar("Emily");
+```
+
+En este ejemplo:
+
+```js
+"Emily";
+```
+
+es un argumento.
+
+---
+
+## Return
+
+`return` devuelve un valor desde una función.
+
+```js
+function sumar(a, b) {
+  return a + b;
+}
+```
+
+---
+
+## Guardar el resultado
+
+```js
+const resultado = sumar(10, 5);
+```
+
+La variable guarda el valor retornado:
+
+```js
+resultado = 15;
+```
+
+---
+
+## Diferencia entre console.log y return
+
+### console.log
+
+```js
+function sumar(a, b) {
+  console.log(a + b);
+}
+```
+
+Muestra el resultado en consola.
+
+### return
+
+```js
+function sumar(a, b) {
+  return a + b;
+}
+```
+
+Devuelve el resultado para poder reutilizarlo.
+
+---
+
+## PDT
+
+Cuando una función recibe argumentos:
+
+```js
+miFuncion(valor1, valor2);
+```
+
+JavaScript asigna:
+
+```js
+parametro1 = valor1;
+parametro2 = valor2;
+```
+
+antes de ejecutar el código de la función.
+
+---
+
+## PDT
+
+Una variable guarda el resultado del `return`, no los parámetros ni el código de la función.
+
+```js
+const resultado = sumar(10, 5);
+```
+
+equivale a:
+
+```js
+const resultado = 15;
+```
